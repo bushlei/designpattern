@@ -11,6 +11,7 @@ public class StoppingState implements LiftState {
     @Override
     public void open() {
         // 电梯停止后开门
+        System.out.println("电梯门打开...");
         this.lift.setLiftState(this.lift.getOpeningState());
     }
 
@@ -22,12 +23,13 @@ public class StoppingState implements LiftState {
     @Override
     public void run() {
         // 电梯停止后运行
+        System.out.println("电梯门运行...");
         this.lift.setLiftState(this.lift.getRunningState());
     }
 
     @Override
     public void stop() {
         // 电梯停止，停止状态要实现的动作
-        System.out.println("电梯停止...");
+        System.out.println("电梯已经停止...");
     }
 }

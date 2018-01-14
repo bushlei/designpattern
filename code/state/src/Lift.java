@@ -17,9 +17,6 @@ public class Lift {
         closingState = new ClosingState(this);
         runningState = new RunningState(this);
         stoppingState = new StoppingState(this);
-
-        // 初始状态位门关闭状态
-        this.liftState = closingState;
     }
 
     public void open() {

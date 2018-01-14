@@ -11,12 +11,13 @@ public class OpeningState implements LiftState {
     @Override
     public void open() {
         // 打开电梯门，打开状态要实现的动作
-        System.out.println("电梯门打开...");
+        System.out.println("电梯门已经打开...");
     }
 
     @Override
     public void close() {
         // 电梯门打开后关闭
+        System.out.println("电梯门关闭...");
         this.lift.setLiftState(this.lift.getClosingState());
     }
 
